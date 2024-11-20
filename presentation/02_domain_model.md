@@ -1,6 +1,6 @@
-# Domain Model - a sphere of knowledge, influence, or activity
+# Domain and Domain Model
 
-Domain is a fancy way of saying the problem you're trying to solve.
+Domain is a sphere of knowledge, influence, or activity
 
 > A model is a simplified representation of a thing or phenomenon 
 > that intentionally emphasizes certain aspects while ignoring others.

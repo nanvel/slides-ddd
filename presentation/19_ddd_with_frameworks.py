@@ -1,8 +1,8 @@
-"""DDD and Frameworks (Django, Scrapy, FastAPI, etc.)
+"""DDD and Frameworks (e.g. Django, Scrapy, FastAPI, ...)
 
 Django:
 - wrap Django ORM within repositories
-- call usecases in views, middlewares, manage commands
+- call use cases in views, middlewares, manage commands
 """
 from aiohttp import web
 

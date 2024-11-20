@@ -1,12 +1,12 @@
 """ Repository methods
 
-- Store an object as data in the persistence layer.
-- Find an object based on its relationship to another.
-- Reconstitution - creation of an object from stored data.
+- Store an object as data in the persistence layer
+- Find an object based on its relationship to another
+- Reconstitution - creation of an object from stored data
 
 Repository methods should either modify state or answer questions,
 but never both (Command-Query Responsibility Segregation):
-- Queries should not have side-effects
+- Queries should not have side effects
 - Commands should not return data
 """
 
