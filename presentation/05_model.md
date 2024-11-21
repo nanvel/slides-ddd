@@ -9,10 +9,11 @@ It is fungible with other identical objects.
 Aggregate: cluster of associated objects that we treat as a unit 
 for the purpose of data changes. Defines and enforces a consistency boundary.
 
-DTO: is a data structure designed to hold entire number of attributes 
+Data Transfer Object: is a data structure designed to hold entire number of attributes
 that need to be transferred to another layer.
 
 Event: represents something that happened.
+
 Command: represents a job that system should perform.
 
 ---
