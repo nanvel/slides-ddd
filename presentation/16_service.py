@@ -7,7 +7,7 @@
 Piece of logic that belongs in the domain model
 but doesn't sit naturally inside a stateful entity or value object.
 
-A good service characteristics:
+Good service characteristics:
 - Not a natural part of an entity or value object
 - The interface is defined in terms of other elements of the domain model
 - The operation is stateless

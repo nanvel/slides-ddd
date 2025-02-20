@@ -7,4 +7,4 @@ Signs of an anemic domain model include:
 - Data model projected from a relational model into objects
 - Too much logic inside use cases
 - All the domain logic resides in services rather 
-  than mostly spread across Entities and Value Objects
+  than mainly spread across Entities and Value Objects

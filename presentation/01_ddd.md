@@ -17,12 +17,12 @@ DDD is not a new doctrine or methodology.
 
 ## Tactical DDD
 
-The approach where DDD is first embraced as a technical tool set 
+The approach where DDD is first embraced as a technical toolset 
 sometimes referred as DDD-Lite.
 
 The building blocks of a model-driven design condenses a core 
-of best practices in object-oriented domain modelling into 
+of best practices in object-oriented domain modeling into 
 a set of basic building blocks.
 
-The objective with these architecture patterns is to try 
+The objective of these architecture patterns is to try 
 to have the complexity of our application grow more slowly than its size.

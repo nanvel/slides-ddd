@@ -1,26 +1,37 @@
 """
-Resource - abstraction for application lifetime.
+Resource - abstraction of application lifetime.
 """
 import logging
+from contextlib import AbstractContextManager, contextmanager
+from typing import Callable
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, orm
 
 
-class InitPg:
-    def __init__(self, db_uri, pool_size=5):
-        self._db_uri = db_uri
-        self._pool_size = pool_size
-        self._engine = None
+class Database:
+    def __init__(self, db_uri: str):
+        self._engine = create_engine(db_uri)
+        self._session_factory = orm.scoped_session(
+            orm.sessionmaker(
+                autocommit=False,
+                autoflush=False,
+                bind=self._engine,
+            ),
+        )
 
-    def init(self):
-        self._engine = create_engine(self._db_uri, pool_size=self._pool_size)
+    @contextmanager
+    def session(self) -> Callable[..., AbstractContextManager[orm.Session]]:
+        session: orm.Session = self._session_factory()
+        try:
+            yield session
+        except Exception:
+            session.rollback()
+            raise
+        finally:
+            session.close()
 
     def shutdown(self):
         self._engine.dispose()
-
-    @property
-    def connection(self):
-        return self._engine.connect()
 
 
 class InitLogging:

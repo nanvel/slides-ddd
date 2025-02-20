@@ -1,6 +1,6 @@
 """ Entity object (aka reference object).
 
-An object defined primarily by its identity.
+An object is defined primarily by its identity.
 Identities must be defined so that they can be effectively tracked.
 """
 from dataclasses import dataclass

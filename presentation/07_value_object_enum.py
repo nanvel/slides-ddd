@@ -27,9 +27,11 @@ class DayOfWeek(int, Enum):
     SATURDAY = Day(6, "Saturday", "Sat")
     SUNDAY = Day(7, "Sunday", "Sun")
 
-    def __new__(cls, *args, **kwargs):
-        obj = super().__new__(cls)
-        obj._value_ = args[0].value
+    def __new__(cls, arg):
+        obj = int.__new__(cls, arg.value)
+        obj._value_ = arg.value
+        obj.long_name = arg.name
+        obj.short_name = arg.short_name
         return obj
 
     @property
@@ -43,8 +45,8 @@ class DayOfWeek(int, Enum):
 
 if __name__ == '__main__':
     print(DayOfWeek.MONDAY.value)
-    print(DayOfWeek.MONDAY.name)
-    print(DayOfWeek(5).name)
+    print(DayOfWeek.MONDAY.long_name)
+    print(DayOfWeek(5).long_name)
     print(DayOfWeek(6).is_weekend)
     print(DayOfWeek.get_weekends())
     print(DayOfWeek.SATURDAY == DayOfWeek.SATURDAY)

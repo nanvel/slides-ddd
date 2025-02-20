@@ -11,7 +11,7 @@ Pros:
 
 Cons:
 - ORM already allows swapping to another database solution
-- maintaining of mapping requires extra work
+- mapping maintenance requires extra work
 - adds a "WTF factor" for programmers who are not familiar with repository pattern
 
 Repositories work with aggregates.
